@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
       body: Container(
         width: double.infinity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -28,15 +29,19 @@ class _HomeState extends State<Home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(45.0),
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(45.0),
 
-                        child: Image.asset(
-                          "images/boy.png",
-                          width: 50,
-                          height: 50,
-                          fit: BoxFit.cover,
-                        ),
+                            child: Image.asset(
+                              "images/boy.png",
+                              width: 50,
+                              height: 50,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -97,16 +102,127 @@ class _HomeState extends State<Home> {
               ],
             ),
             SizedBox(height: 40.0),
+
             Container(
-              child: Column(
-                children: [
-                  Image.asset(
-                    "images/boy.png",
-                    height: 50.0,
-                    width: 50,
-                    fit: BoxFit.cover,
+              margin: EdgeInsets.only(left: 30.0, right: 30.0),
+
+              child: Material(
+                elevation: 3.0,
+                borderRadius: BorderRadius.circular(20),
+
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                ],
+
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+                        child: Row(
+                          children: [
+                            ClipRRect(
+                              child: Image.asset(
+                                "images/boy.png",
+                                height: 50.0,
+                                width: 50,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            SizedBox(width: 15.0),
+                            Text(
+                              "Yahya Abu Zahra",
+                              style: const TextStyle(
+                                color: Colors.black,
+                                fontFamily: 'Lato',
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      Image.asset("images/Ayasofya Camii.jpg"),
+                      SizedBox(height: 5.0),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Row(
+                          children: [
+                            Icon(Icons.location_on, color: Colors.red),
+                            SizedBox(width: 5.0),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 0.1),
+                              child: Text(
+                                "Ayasofya Camii,stanbul,Türkiye",
+                                style: const TextStyle(
+                                  color: Colors.black,
+
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 5.0),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Ayasofya Camii is a former Greek Orthodox Christian basilica, later an imperial mosque, and now a mosque again located in Istanbul, Turkey.",
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Lato',
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite_outline, color: Colors.black),
+                            SizedBox(width: 10.0),
+                            Text(
+                              "Like",
+                              style: const TextStyle(
+                                color: Colors.black,
+
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+
+                            Icon(
+                              Icons.comment_outlined,
+                              color: Colors.black,
+                              size: 25.0,
+                            ),
+                            SizedBox(width: 10.0),
+                            Text(
+                              "Comment",
+                              style: const TextStyle(
+                                color: Colors.black,
+
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
