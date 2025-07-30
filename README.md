@@ -1,6 +1,6 @@
-# 🧭 Travelers App
+# 🧭 Travel App
 
-**Travelers App** is a modern mobile application built using **Flutter** that helps users discover top travel destinations around the world.  
+**Travel App** is a modern mobile application built using **Flutter** that helps users discover top travel destinations around the world.  
 It features user authentication, AI assistance, location integration, and user-generated travel posts — making it an ideal companion for explorers and tourists.
 
 ---
